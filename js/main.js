@@ -19,6 +19,7 @@ function preload() {
 }
 
 var player;
+var count=0;
 
 var cursors;
 var enemy;
@@ -152,7 +153,8 @@ function update() {
 
     
     player.body.velocity.x = 0;
-	if(score>90){
+	if(score>90 ){
+		if(count<1)
 		scoreText.text = 'GOOD JOB you are healthy now    Score: ' + score ;
 		
 		}
@@ -280,30 +282,34 @@ function collectStar2 (player, star) {
 function collision(player ,enemy){
      player.kill();
 	 scoreText.text = 'Better luck next time' ;
-	 
+	 count++;
 }
 
 function collision2(player ,enemy2){
      player.kill();
 	 scoreText.text = 'Better luck next time' ;
+	 count++;
 	 
 }
 
 function collision3(player ,enemy3){
      player.kill();
 	 scoreText.text = 'Better luck next time' ;
+	 count++;
 	 
 }
 
 function collision4(player ,enemy4){
      player.kill();
 	 scoreText.text = 'Better luck next time' ;
+	 count++;
 	 
 }
 
 function collision5(player ,enemy5){
      player.kill();
 	 scoreText.text = 'Better luck next time' ;
+	 count++;
 	 
 }
 
